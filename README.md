@@ -27,7 +27,7 @@ This project is made **for educational and research purposes only**. By using or
 
 ### **4️⃣ How It Works (Once Deployed)**  
 ✅ Any registered user can **sign in and mark attendance** for **everyone in the same batch/group**.  
-✅ New users can **register** and will be automatically assigned to their batch/group.  
+✅ New users can **register** and need not to register again lest admin forget to save and update the latest database .  
 ✅ As long as **one user scans attendance, all others in that batch are marked present**.  
 ✅ **Fully automated process**—no manual marking needed after setup.  
 
