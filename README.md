@@ -1,6 +1,6 @@
 ## **Camuflaged - Proof of Concept for Automated Attendance**  
 
-If you liked it do give it a star
+# If you liked it do give it a ⭐
 
 ### **⚠️ DISCLAIMER: PROOF OF CONCEPT ONLY**  
 Camuflaged is a **proof of concept** project designed to demonstrate that **attendance automation is possible if the underlying algorithm of an attendance system is weak**. This project does not **hack, modify, or manipulate** any official system. Instead, it highlights how a **flawed attendance verification method** can be **exploited by automation**.  
