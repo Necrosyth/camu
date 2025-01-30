@@ -1,7 +1,23 @@
-from pyzbar.pyzbar import decode
-from PIL import Image
+import cv2
+import numpy as np
 
 def scan_it(qr):
-    img = Image.open(qr)
-    result = decode(img)
-    return result[0][0].decode('utf-8')
+    # Read the image
+    image = cv2.imread(qr)
+    
+    if image is None:
+        print("Error: Could not read image")
+        return None
+        
+    # Initialize QR Code detector
+    qr_detector = cv2.QRCodeDetector()
+    
+    # Detect and decode
+    try:
+        data, bbox, _ = qr_detector.detectAndDecode(image)
+        if data:
+            return data
+        return None
+    except Exception as e:
+        print(f"Error scanning QR code: {e}")
+        return None

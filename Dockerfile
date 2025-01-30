@@ -15,10 +15,13 @@ ENV PATH="cammo/bin:$PATH"
 
 # Install Python dependencies inside the virtual environment
 COPY requirements.txt .
-RUN pip3 install --no-cache-dir -r requirements.txt
+RUN pip install --no-cache-dir -r requirements.txt  # Use 'pip' instead of 'pip3' inside the venv
 
 # Copy the rest of the application code
 COPY . .
 
-# Set default command
-CMD ["python3", "app.py"]
+# Expose the correct port (default to 5000)
+EXPOSE 5000
+
+# Set the default command to run the app
+CMD ["python", "app.py"]

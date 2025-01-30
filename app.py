@@ -4,7 +4,7 @@ import time, datetime, base64, pytz
 from database import *
 from markit import *
 from qr import *
-
+import os
 BASE_DIR = os.path.abspath("../../")
 
 app = Flask(__name__)
@@ -175,6 +175,6 @@ try:
 except Exception as e:
     print(e)
 
-
-if __name__=="__main__":
-    app.run(debug=True, port=6969, host='0.0.0.0')
+if __name__ == "__main__":
+    port = int(os.environ.get("PORT", 5000))  # Use Railway-assigned port
+    app.run(host='0.0.0.0', port=port)
